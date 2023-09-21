@@ -10,7 +10,14 @@ import {HiLocationMarker} from "react-icons/hi";
 import throndheim from "../assets/image 5.svg";
 import sixt from "../assets/image 6.svg";
 import brangsore from "../assets/image 7.svg";
-
+import france from "../assets/fra.svg";
+import norway from "../assets/nor.svg";
+import england from "../assets/gbr.svg";
+import india from "../assets/ind.svg";
+import australia from "../assets/aus.svg";
+import spain from "../assets/esp.svg";
+import greece from "../assets/grc.svg";
+import italy from "../assets/ita.svg"
 
 const Home = () => (
   <div>
@@ -158,35 +165,109 @@ const Home = () => (
             </div>
           </div>
         </div>
-        <div className="flex">
-            <div className="flex flex-col">
-                <div className="flex flex-col bg-black">
+        <div className="flex justify-center gap-1 relative bottom-16">
+            <div className="flex flex-col w-[200px]">
+                <div className="flex flex-col bg-black opacity-[0.7] p-2 relative top-16 w-[150px]">
                     <div className="flex">
                      <p className="text-white font-bold">Trondheim</p>
+                     <img src={norway} alt="fra" className="h-4 w-5 relative top-1.5 left-7"/>
                     </div>
                     <p className="text-white font-semibold">46 properties</p>
                 </div>
-              <img src={throndheim} alt="throndheim" />             
+              <img src={throndheim} alt="throndheim" />  
+              <p className="text-[#6F6A6A] text-sm flex justify-end">Double from</p>           
             </div>
-            <div className="flex flex-col">
-                <div className="flex flex-col bg-black">
+            <div className="flex flex-col w-[200px]">
+                <div className="flex flex-col bg-black opacity-[0.7] p-2 relative top-16 w-[150px]">
                     <div className="flex">
-                     <p className="text-white font-bold">Trondheim</p>
+                     <p className="text-white font-bold">Sixt</p>
+                     <img src={france} alt="fra" className="h-4 w-5 relative top-1.5 left-7"/>
                     </div>
-                    <p className="text-white font-semibold">46 properties</p>
+                    <p className="text-white font-semibold">21 properties</p>
                 </div>
               <img src={sixt} alt="sixt" /> 
+              <p className="text-[#6F6A6A] text-sm flex justify-end">Double from</p>
             </div>
-           <div className="flex flex-col">
-            <div className="flex flex-col bg-black">
+           <div className="flex flex-col w-[200px]">
+            <div className="flex flex-col bg-black opacity-[0.7] p-2 relative top-16 w-[150px]">
                     <div className="flex">
-                     <p className="text-white font-bold">Trondheim</p>
+                     <p className="text-white font-bold">Brangsore</p>
+                     <img src={england} alt="fra" className="h-4 w-5 relative top-1.5 left-7"/>
                     </div>
-                    <p className="text-white font-semibold">46 properties</p>
+                    <p className="text-white font-semibold">4 properties</p>
                 </div>
-             <img src={brangsore} alt="brangsore" />  
+             <img src={brangsore} alt="brangsore" /> 
+             <p className="text-[#6F6A6A] text-sm flex justify-end">Double from</p> 
             </div>
-
+        <div className="flex flex-col pt-16">
+            <div className="flex bg-[#EDF1F7] flex-col">
+            <div className="flex justify-between gap-16 pb-1.5  border border-b-gray-200">
+              <div className="flex gap-1">
+                <img src={norway} alt="country-flag" className="h-3 w-5 relative top-2"/>
+                <p className="text-base">Trondheim</p>
+              </div>
+              <p className="text-base text-[#989898]">From</p>
+            </div>
+            <div className="flex justify-between gap-12 pb-1.5 border border-b-gray-200">
+              <div className="flex gap-1">
+                <img src={france} alt="country-flag" className="h-3 w-5 relative top-2"/>
+                <p className="text-base">Sixt</p>
+              </div>
+              <p className="text-base text-[#989898]">From</p>
+            </div>
+            <div className="flex justify-between gap-12 pb-1.5  border border-b-gray-200">
+              <div className="flex gap-1">
+                <img src={england} alt="country-flag" className="h-3 w-5 relative top-2"/>
+                <p className="text-base">Bransgore</p>
+              </div>
+              <p className="text-base text-[#989898]">From</p>
+            </div>
+            <div className="flex justify-between gap-12 pb-1.5  border border-b-gray-200">
+              <div className="flex gap-1">
+                <img src={india} alt="country-flag" className="h-3 w-5 relative top-2"/>
+                <p className="text-base">Alipur</p>
+              </div>
+              <p className="text-base text-[#989898]">From</p>
+            </div>
+            <div className="flex justify-between gap-12 pb-1.5  border border-b-gray-200">
+              <div className="flex gap-1">
+                <img src={australia} alt="country-flag" className="h-3 w-5 relative top-2"/>
+                <p className="text-base">Aldinga Beach</p>
+              </div>
+              <p className="text-base text-[#989898]">From</p>
+            </div>
+            <div className="flex justify-between gap-12 pb-1.5 border border-b-gray-200">
+              <div className="flex gap-1">
+                <img src={spain} alt="country-flag" className="h-3 w-5 relative top-2"/>
+                <p className="text-base">Cala Anguila</p>
+              </div>
+              <p className="text-base text-[#989898]">From</p>
+            </div>
+            <div className="flex justify-between gap-12 pb-1.5  border border-b-gray-200">
+              <div className="flex gap-1">
+                <img src={greece} alt="country-flag" className="h-3 w-5 relative top-2"/>
+                <p className="text-base">Kavousion</p>
+              </div>
+              <p className="text-base text-[#989898]">From</p>
+            </div>
+            <div className="flex justify-between gap-12 pb-1.5 border border-b-gray-200">
+              <div className="flex gap-1">
+                <img src={italy} alt="country-flag" className="h-3 w-5 relative top-2 "/>
+                <p className="text-base">Pieve Di Ledro</p>
+              </div>
+              <p className="text-base text-[#989898]">From</p>
+            </div>
+            </div>
+            <div className="flex bg-[#0086BA] p-2">
+             <AiOutlineSearch className="relative fill-white top-1.5 left-10"/>
+             <a
+            href="http://"
+            className="text-white list-none font-normal m-auto"
+          >
+            Discover
+          </a>
+        </div>
+        </div>
         </div>
       </section>
       <section className="mt-10">
