@@ -6,7 +6,11 @@ import { PiCompassFill } from "react-icons/pi";
 import wales from "../assets/image 8.svg";
 import londonFirst from "../assets/image 9.svg";
 import londonSecond from "../assets/image 10.svg";
-import {HiLocationMarker} from "react-icons/hi"
+import {HiLocationMarker} from "react-icons/hi";
+import throndheim from "../assets/image 5.svg";
+import sixt from "../assets/image 6.svg";
+import brangsore from "../assets/image 7.svg";
+
 
 const Home = () => (
   <div>
@@ -153,6 +157,36 @@ const Home = () => (
               </a>
             </div>
           </div>
+        </div>
+        <div className="flex">
+            <div className="flex flex-col">
+                <div className="flex flex-col bg-black">
+                    <div className="flex">
+                     <p className="text-white font-bold">Trondheim</p>
+                    </div>
+                    <p className="text-white font-semibold">46 properties</p>
+                </div>
+              <img src={throndheim} alt="throndheim" />             
+            </div>
+            <div className="flex flex-col">
+                <div className="flex flex-col bg-black">
+                    <div className="flex">
+                     <p className="text-white font-bold">Trondheim</p>
+                    </div>
+                    <p className="text-white font-semibold">46 properties</p>
+                </div>
+              <img src={sixt} alt="sixt" /> 
+            </div>
+           <div className="flex flex-col">
+            <div className="flex flex-col bg-black">
+                    <div className="flex">
+                     <p className="text-white font-bold">Trondheim</p>
+                    </div>
+                    <p className="text-white font-semibold">46 properties</p>
+                </div>
+             <img src={brangsore} alt="brangsore" />  
+            </div>
+
         </div>
       </section>
       <section className="mt-10">
