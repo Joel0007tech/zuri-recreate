@@ -205,32 +205,67 @@ const Home = () => (
           Popular Postcodes
         </h3>
         <div className="flex justify-center mt-5 gap-5">
-          <div className="flex flex-col border rounded-lg pb-4">
+          <div className="flex flex-col border rounded-lg pb-4 bg-[#FAFEFF]">
             <img src={wales} alt="wales"/>
-            <h3>SA99 1DU</h3>
-            <div className="flex">
-            <HiLocationMarker />
-             <p>Morriston, Wales</p>
+            <h3 className="text-2xl p-3 font-semibold">SA99 1DU</h3>
+            <div className="flex gap-2 p-3 ">
+            <HiLocationMarker className="relative top-1"/>
+             <p className="text-md font-semibold">Morriston, Wales</p>
             </div>
           </div>
-          <div className="flex flex-col border rounded-lg pb-4">
+          <div className="flex flex-col border rounded-lg pb-4 bg-[#FAFEFF]">
             <img src={londonFirst} alt="londonF"/>
-            <h3>SA99 1DU</h3>
-            <div className="flex">
-            <HiLocationMarker />
-             <p>London, England</p>
+            <h3 className="text-2xl p-3 font-semibold">W1A 1AA</h3>
+            <div className="flex gap-2 p-3 ">
+            <HiLocationMarker className="relative top-1"/>
+             <p className="text-md font-semibold">London, England</p>
             </div>
           </div>
-          <div className="flex flex-col border rounded-lg pb-4">
+          <div className="flex flex-col border rounded-lg pb-4 bg-[#FAFEFF]">
             <img src={londonSecond} alt="londonS"/>
-            <h3>SA99 1DU</h3>
-            <div className="flex">
-            <HiLocationMarker />
-             <p>London, England</p>
+            <h3 className="text-2xl p-3 font-semibold">WC2N 5DU</h3>
+            <div className="flex gap-2 p-3 ">
+            <HiLocationMarker className="relative top-1"/>
+             <p className="text-md font-semibold">London, England</p>
             </div>
           </div>
         </div>
+        <div className="flex justify-center mt-10">
+        <a
+            href="http://"
+            className="bg-white border-[3px] border-[#0086BA] text-[#0086BA] text-sm font-bold
+                 list-none rounded-md w-fit h-fit pl-8 pr-8 p-3 relative bottom-2 hover:text-white hover:bg-[#0086BA]"
+          >
+            View all
+          </a>
+        </div>
       </section>
+     <footer className="bg-[#008CBA]">
+       <div className="flex gap-5 justify-evenly p-5 mt-20">
+        <div className="flex flex-col">
+            <h3 className="font-bold text-2xl text-white pb-3">Quick Links</h3>
+            <a href="https://" className="text-[#CCC] text-base font-medium list-none">Search</a>
+            <a href="https://" className="text-[#CCC] text-base font-medium list-none">Postcode by country</a>
+            <a href="https://" className="text-[#CCC] text-base font-medium list-none">Postcode by Introduction Date</a>
+            <a href="https://" className="text-[#CCC] text-base font-medium list-none">Postcode near me</a>
+            <a href="https://" className="text-[#CCC] text-base font-medium list-none">Postcode Lottery</a>
+        </div>
+        <div className="flex flex-col">
+            <h3 className="font-bold text-2xl text-white pb-3">Postcode Maps</h3>
+            <a href="https://" className="text-[#CCC] text-base font-medium list-none">Postcode Map by User Type</a>
+            <a href="https://" className="text-[#CCC] text-base font-medium list-none">Postcode Map by User Category</a>
+            <a href="https://" className="text-[#CCC] text-base font-medium list-none">Postcode Map by Council Tax Band</a>
+
+        </div>
+        <div className="flex flex-col">
+            <h3 className="font-bold text-2xl text-white pb-3">Website Information</h3>
+            <a href="https://" className="text-[#CCC] text-base font-medium list-none">About this website</a>
+            <a href="https://" className="text-[#CCC] text-base font-medium" list-none>Disclaimer and Limitations</a>
+            <a href="https://" className="text-[#CCC] text-base font-medium list-none">Privacy Policy</a>
+
+        </div>
+       </div>
+     </footer>
     </div>
   </div>
 );
