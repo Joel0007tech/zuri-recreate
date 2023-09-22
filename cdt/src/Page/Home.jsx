@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React from "react";
 import { AiFillHome, AiOutlineSearch } from "react-icons/ai";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { MdGroups } from "react-icons/md";
@@ -21,17 +21,7 @@ import italy from "../assets/ita.svg"
 
 
 
-const Home = () => {
-  const [display, setdisplay] = useState('');
-
-  function reveal() {
-    setdisplay(display(
-      <h3>Hello</h3>
-    ))
-  }
-  
-  (
- 
+const Home = () => (
  <div>
     <div>
       <header className=" pt-4 pl-8 flex gap-5 justify-between border border-b-[#808080]">
@@ -48,7 +38,13 @@ const Home = () => {
                 Postcode lists
               </a>
             </li>
+            <div>
             <IoMdArrowDropdown className="fill-[#808080] relative top-1.5" />
+            <div className="drop-down">
+             <a href="http://">By country</a>
+             <a href="http://">By Introduction Date</a>
+            </div>
+            </div>
           </div>
           <div className="flex">
             <li>
@@ -59,7 +55,14 @@ const Home = () => {
                 Postcode maps
               </a>
             </li>
+            <div>
             <IoMdArrowDropdown className="fill-[#808080] relative top-1.5" />
+            <div className="drop-down">
+             <a href="http://">User Type</a>
+             <a href="http://">Use Category</a>
+             <a href="http://">Council Tax Band</a>
+            </div>
+            </div>
           </div>
           <li>
             <a
@@ -86,7 +89,13 @@ const Home = () => {
                 Help and information
               </a>
             </li>
-            <IoMdArrowDropdown className="fill-[#808080] relative top-1.5" onClick={reveal}/>
+            <div>
+            <IoMdArrowDropdown className="fill-[#808080] relative top-1.5" />
+            <div className="drop-down">
+             <a href="http://">About This Website</a>
+             <a href="http://">Privacy Policy</a>
+            </div>
+            </div>
           </div>
         </ul>
         <div className="flex gap-2 border border-black rounded-lg p-2 relative bottom-2">
@@ -396,5 +405,4 @@ const Home = () => {
     </div> 
   </div>
 );
-}
 export default Home;
