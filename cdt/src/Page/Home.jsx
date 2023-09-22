@@ -24,7 +24,7 @@ import italy from "../assets/ita.svg"
 const Home = () => (
  <div>
     <div>
-      <header className=" pt-4 pl-8 flex gap-5 justify-between border border-b-[#808080]">
+      <header className=" pt-4 pl-8 flex gap-5 justify-between border border-b-[#808080] sm:hidden">
         <a href="http://">
           <AiFillHome className=" fill-[#0086BA] text-2xl" />
         </a>
@@ -147,7 +147,7 @@ const Home = () => (
         </div>
       </section>
       <section className=" mt-20">
-        <div className="flex justify-center gap-2">
+        <div className="flex justify-center gap-2 sm:flex sm:flex-col">
           <a href="http://" className="text-3xl font-bold text-blue-800">
             Booking
             <span
@@ -157,8 +157,8 @@ const Home = () => (
               .com
             </span>
           </a>
-          <div className="flex border rounded-md bg-orange-400 p-2 relative bottom-2 gap-6">
-            <div className="flex gap-4">
+          <div className="flex border rounded-md bg-orange-400 p-2 relative bottom-2 gap-6 sm:flex sm:flex-col">
+            <div className="flex gap-4 sm:flex sm:flex-col">
               <input
                 type="text"
                 name=""
@@ -186,7 +186,7 @@ const Home = () => (
             </div>
           </div>
         </div>
-        <div className="flex justify-center gap-1 relative bottom-16">
+        <div className="flex justify-center gap-1 relative bottom-16 sm:flex sm:flex-col">
             <div className="flex flex-col w-[200px]">
                 <div className="flex flex-col bg-black opacity-[0.7] p-2 relative top-16 w-[150px]">
                     <div className="flex">
@@ -295,7 +295,7 @@ const Home = () => (
         <h3 className="text-3xl text-center text-[#0086BA] font-bold">
           Key Features
         </h3>
-        <div className="flex justify-center gap-10 mt-20">
+        <div className="flex justify-center gap-10 mt-20 sm:flex sm:flex-col">
           <div className="flex flex-col border border-gray-400 rounded-xl p-6 gap-8 bg-[#FAFEFF]">
             <div className="border rounded-full bg-[#8ed6f2] w-fit p-6 text-xl">
               <AiOutlineSearch className="fill-[#0086BA] text-4xl relative right-3" />
@@ -340,7 +340,7 @@ const Home = () => (
         <h3 className="text-3xl text-center text-[#0086BA] font-bold">
           Popular Postcodes
         </h3>
-        <div className="flex justify-center mt-5 gap-5">
+        <div className="flex justify-center mt-5 gap-5 sm:flex sm:flex-col">
           <div className="flex flex-col border rounded-lg pb-4 bg-[#FAFEFF]">
             <img src={wales} alt="wales"/>
             <h3 className="text-2xl p-3 font-semibold">SA99 1DU</h3>
