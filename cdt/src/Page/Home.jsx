@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { AiFillHome, AiOutlineSearch } from "react-icons/ai";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { MdGroups } from "react-icons/md";
@@ -20,8 +20,18 @@ import greece from "../assets/grc.svg";
 import italy from "../assets/ita.svg"
 
 
+const Home = () => {
 
-const Home = () => (
+  const display =
+  {
+    display:"none"
+  }
+
+const [open, setOpen] = useState(false);
+const [second, setSecond] = useState(false);
+const [third, setThird] = useState(false);
+
+return (
  <div>
     <div>
       <header className=" pt-4 pl-8 flex gap-5 justify-between border border-b-[#808080] sm:hidden">
@@ -39,11 +49,15 @@ const Home = () => (
               </a>
             </li>
             <div>
-            <IoMdArrowDropdown className="fill-[#808080] relative top-1.5" />
-            <div className="drop-down">
-             <a href="http://">By country</a>
-             <a href="http://">By Introduction Date</a>
+            <IoMdArrowDropdown className="fill-[#808080] relative top-1.5" onMouseOver={() => setOpen(!open)}/>
+            {open && (
+            <div className="absolute" >
+              <ul className="relative top-2 right-28 bg-yellow-500 p-2">
+             <li><a href="http://">By country</a></li>
+             <li><a href="http://">By Introduction Date</a></li>
+             </ul>
             </div>
+            )}
             </div>
           </div>
           <div className="flex">
@@ -56,12 +70,16 @@ const Home = () => (
               </a>
             </li>
             <div>
-            <IoMdArrowDropdown className="fill-[#808080] relative top-1.5" />
-            <div className="drop-down">
-             <a href="http://">User Type</a>
-             <a href="http://">Use Category</a>
-             <a href="http://">Council Tax Band</a>
-            </div>
+            <IoMdArrowDropdown className="fill-[#808080] relative top-1.5" onMouseOver={() => setSecond(!second)}/>
+            {second && (
+              <div className="absolute ">
+                <ul className="relative top-2 right-16 bg-yellow-500 p-2">
+                  <li>  <a href="http://">User Type</a></li>
+                  <li>  <a href="http://">Use Category</a></li>
+                  <li>  <a href="http://">Council Tax Band</a></li>
+                </ul>
+             </div>
+            )}
             </div>
           </div>
           <li>
@@ -90,11 +108,17 @@ const Home = () => (
               </a>
             </li>
             <div>
-            <IoMdArrowDropdown className="fill-[#808080] relative top-1.5" />
-            <div className="drop-down">
-             <a href="http://">About This Website</a>
-             <a href="http://">Privacy Policy</a>
-            </div>
+            <IoMdArrowDropdown className="fill-[#808080] relative top-1.5" onMouseOver={() => setThird(!third)} />
+            {third && (
+               <div className=" absolute">
+              <ul className="relative top-2 right-16 bg-yellow-500 p-2">
+                  <li> <a href="http://">About This Website</a></li>
+                  <li><a href="http://">Privacy Policy</a></li>
+                </ul>
+              
+               
+              </div>
+            )}
             </div>
           </div>
         </ul>
@@ -404,5 +428,6 @@ const Home = () => (
      </footer>
     </div> 
   </div>
-);
+)
+};
 export default Home;
