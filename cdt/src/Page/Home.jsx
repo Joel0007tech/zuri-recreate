@@ -109,7 +109,7 @@ const Home = () => (
         </div>
       </header>
       <section className=" mt-20">
-        <h3 className="text-center text-5xl font-semibold">
+        <h3 className="text-center text-5xl font-semibold sm:text-4xl">
           POSTCODE SEARCH MADE EASY
         </h3>
         <p className="text-md font-normal text-[#808080] text-center mt-4 line-clamp-2">
@@ -118,20 +118,20 @@ const Home = () => (
           <br />
           your device geolocation service to find postcodes near you
         </p>
-        <div className="flex gap-3 justify-center mt-14">
-          <div className="flex gap-2 border border-black rounded-lg p-2 relative bottom-2">
-            <AiOutlineSearch className="relative top-1 text-2xl" />
+        <div className="flex gap-3 justify-center mt-14 sm:flex sm:flex-col">
+        
+            <AiOutlineSearch className="relative top-2.5 text-2xl left-10" />
             <input
               type="text"
               id=""
-              placeholder="Search for a postcode or place name"
-              className="w-[300px] border-none"
+              placeholder="search for postal code or placename"
+              className="w-[300px] border border-black rounded-md pl-10 pr-10"
             />
-          </div>
+
           <a
             href="http://"
             className="bg-[#0086BA] text-white text-sm font-bold
-                 list-none rounded-md w-fit h-fit pl-8 pr-8 p-3 relative bottom-2"
+                 list-none rounded-md w-fit h-fit pl-8 pr-8 p-3 relative sm:m-auto"
           >
             Search
           </a>
@@ -148,7 +148,7 @@ const Home = () => (
       </section>
       <section className=" mt-20">
         <div className="flex justify-center gap-2 sm:flex sm:flex-col">
-          <a href="http://" className="text-3xl font-bold text-blue-800">
+          <a href="http://" className="text-3xl font-bold text-blue-800 sm:p-5">
             Booking
             <span
               className="text-3xl font-bold
@@ -157,7 +157,7 @@ const Home = () => (
               .com
             </span>
           </a>
-          <div className="flex border rounded-md bg-orange-400 p-2 relative bottom-2 gap-6 sm:flex sm:flex-col">
+          <div className="flex border rounded-md bg-orange-400 p-2 relative bottom-2 gap-6 sm:flex sm:flex-col sm:m-2">
             <div className="flex gap-4 sm:flex sm:flex-col">
               <input
                 type="text"
@@ -186,8 +186,8 @@ const Home = () => (
             </div>
           </div>
         </div>
-        <div className="flex justify-center gap-1 relative bottom-16 sm:flex sm:flex-col">
-            <div className="flex flex-col w-[200px]">
+        <div className="flex justify-center gap-1 relative bottom-16 sm:flex sm:flex-col sm:m-2">
+            <div className="flex flex-col w-[200px] sm:m-auto">
                 <div className="flex flex-col bg-black opacity-[0.7] p-2 relative top-16 w-[150px]">
                     <div className="flex">
                      <p className="text-white font-bold">Trondheim</p>
@@ -198,7 +198,7 @@ const Home = () => (
               <img src={throndheim} alt="throndheim" />  
               <p className="text-[#6F6A6A] text-sm flex justify-end">Double from</p>           
             </div>
-            <div className="flex flex-col w-[200px]">
+            <div className="flex flex-col w-[200px] sm:m-auto">
                 <div className="flex flex-col bg-black opacity-[0.7] p-2 relative top-16 w-[150px]">
                     <div className="flex">
                      <p className="text-white font-bold">Sixt</p>
@@ -209,7 +209,7 @@ const Home = () => (
               <img src={sixt} alt="sixt" /> 
               <p className="text-[#6F6A6A] text-sm flex justify-end">Double from</p>
             </div>
-           <div className="flex flex-col w-[200px]">
+           <div className="flex flex-col w-[200px] sm:m-auto">
             <div className="flex flex-col bg-black opacity-[0.7] p-2 relative top-16 w-[150px]">
                     <div className="flex">
                      <p className="text-white font-bold">Brangsore</p>
@@ -221,7 +221,7 @@ const Home = () => (
              <p className="text-[#6F6A6A] text-sm flex justify-end">Double from</p> 
             </div>
         <div className="flex flex-col pt-16">
-            <div className="flex bg-[#EDF1F7] flex-col">
+            <div className="flex bg-[#EDF1F7] flex-col sm:w-[280px] sm:m-auto sm:border sm:rounded-md sm:p-2">
             <div className="flex justify-between gap-16 pb-1.5  border border-b-gray-200">
               <div className="flex gap-1">
                 <img src={norway} alt="country-flag" className="h-3 w-5 relative top-2"/>
@@ -279,8 +279,8 @@ const Home = () => (
               <p className="text-base text-[#989898]">From</p>
             </div>
             </div>
-            <div className="flex bg-[#0086BA] p-2">
-             <AiOutlineSearch className="relative fill-white top-1.5 left-10"/>
+            <div className="flex bg-[#0086BA] p-2 sm:w-[280px] sm:m-auto sm:border sm:rounded-md">
+             <AiOutlineSearch className="relative fill-white top-1.5 left-10 sm:relative sm:left-20"/>
              <a
             href="http://"
             className="text-white list-none font-normal m-auto"
@@ -295,7 +295,7 @@ const Home = () => (
         <h3 className="text-3xl text-center text-[#0086BA] font-bold">
           Key Features
         </h3>
-        <div className="flex justify-center gap-10 mt-20 sm:flex sm:flex-col">
+        <div className="flex justify-center gap-10 mt-20 sm:flex sm:flex-col sm:p-4">
           <div className="flex flex-col border border-gray-400 rounded-xl p-6 gap-8 bg-[#FAFEFF]">
             <div className="border rounded-full bg-[#8ed6f2] w-fit p-6 text-xl">
               <AiOutlineSearch className="fill-[#0086BA] text-4xl relative right-3" />
@@ -340,7 +340,7 @@ const Home = () => (
         <h3 className="text-3xl text-center text-[#0086BA] font-bold">
           Popular Postcodes
         </h3>
-        <div className="flex justify-center mt-5 gap-5 sm:flex sm:flex-col">
+        <div className="flex justify-center mt-5 gap-5 sm:flex sm:flex-col sm:p-4">
           <div className="flex flex-col border rounded-lg pb-4 bg-[#FAFEFF]">
             <img src={wales} alt="wales"/>
             <h3 className="text-2xl p-3 font-semibold">SA99 1DU</h3>
@@ -377,7 +377,7 @@ const Home = () => (
         </div>
       </section>
      <footer className="bg-[#008CBA]">
-       <div className="flex gap-5 justify-evenly p-5 mt-20">
+       <div className="flex gap-5 justify-evenly p-5 mt-20 sm:flex sm:flex-col">
         <div className="flex flex-col">
             <h3 className="font-bold text-2xl text-white pb-3">Quick Links</h3>
             <a href="https://" className="text-[#CCC] text-base font-medium list-none">Search</a>
