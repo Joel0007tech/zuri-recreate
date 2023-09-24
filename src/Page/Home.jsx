@@ -153,19 +153,20 @@ return (
             <a href="http://">Help and Information</a></li>
            <AiFillCaretRight className="fill-gray-400" onClick={() => setMobileReveal(!mobileReveal)}/>
            </div>
-         
            {mobileReveal &&
            (
-              <ul className="flex flex-col">
-                <li><a href="http://" className="list-none text-white text-base bg-blue-700 p-2">Back</a></li>
-                <li><a href="http://" className="list-none text-white text-base bg-blue-700 p-2">Help and Information</a></li>
-                <li><a href="http://" className="list-none text-white text-base bg-blue-700 p-2">About this website</a></li>
-                <li><a href="http://" className="list-none text-white text-base bg-blue-700 p-2">Privacy Policy</a></li>
+           
+              <ul className="flex flex-col relative">
+                <li><a href="http://" className="list-none text-white text-base">Back</a></li>
+                <li><a href="http://" className="list-none text-white text-base">Help and Information</a></li>
+                <li><a href="http://" className="list-none text-white text-base">About this website</a></li>
+                <li><a href="http://" className="list-none text-white text-base">Privacy Policy</a></li>
               </ul>
+  
            )
            } 
+         
             
-
           <div className="flex ml-3 bg-blue-700">
           <input type="text" name="" id="" className=" pl-10"/>
           <a href="http://" className="bg-[#0027BA] text-white p-1 pr-7 pl-7 list-none text-base">
@@ -179,10 +180,10 @@ return (
          {secondReveal &&
            (
               <ul className="flex flex-col">
-                <li><a href="http://" className="list-none text-white text-base bg-blue-700 p-2">Back</a></li>
-                <li><a href="http://" className="list-none text-white text-base bg-blue-700 p-2">Postcard Lists</a></li>
-                <li><a href="http://" className="list-none text-white text-base bg-blue-700 p-2">By County</a></li>
-                <li><a href="http://" className="list-none text-white text-base bg-blue-700 p-2">By Introduction Date</a></li>
+                <li><a href="http://" className="list-none text-white text-base">Back</a></li>
+                <li><a href="http://" className="list-none text-white text-base">Postcard Lists</a></li>
+                <li><a href="http://" className="list-none text-white text-base">By County</a></li>
+                <li><a href="http://" className="list-none text-white text-base">By Introduction Date</a></li>
               </ul>
            )
            } 
@@ -193,12 +194,12 @@ return (
             </div>
             {thirdReveal &&
            (
-              <ul className="flex flex-col">
-                <li><a href="http://" className="list-none text-white text-base bg-blue-700 p-2">Back</a></li>
-                <li><a href="http://" className="list-none text-white text-base bg-blue-700 p-2">Postcode Maps</a></li>
-                <li><a href="http://" className="list-none text-white text-base bg-blue-700 p-2">User Type</a></li>
-                <li><a href="http://" className="list-none text-white text-base bg-blue-700 p-2">Use Category</a></li>
-                <li><a href="http://" className="list-none text-white text-base bg-blue-700 p-2">Council Tax Band</a></li>
+              <ul className="flex flex-col ">
+                <li><a href="http://" className="list-none text-white text-base">Back</a></li>
+                <li><a href="http://" className="list-none text-white text-base">Postcode Maps</a></li>
+                <li><a href="http://" className="list-none text-white text-base">User Type</a></li>
+                <li><a href="http://" className="list-none text-white text-base">Use Category</a></li>
+                <li><a href="http://" className="list-none text-white text-base">Council Tax Band</a></li>
               </ul>
            )
            } 
