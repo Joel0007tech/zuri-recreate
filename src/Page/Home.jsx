@@ -18,7 +18,9 @@ import australia from "../assets/aus.svg";
 import spain from "../assets/esp.svg";
 import greece from "../assets/grc.svg";
 import italy from "../assets/ita.svg";
-
+import Aos from 'aos';
+import 'aos/dist/aos.css'
+Aos.init();
 
 const Home = () => {
 
@@ -209,10 +211,10 @@ return (
         }
       </header>
       <section className=" mt-20">
-        <h3 className="text-center text-5xl font-semibold sm:text-4xl">
+        <h3 className="text-center text-5xl font-semibold sm:text-4xl" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
           POSTCODE SEARCH MADE EASY
         </h3>
-        <p className="text-md font-normal text-[#808080] text-center mt-4 line-clamp-2">
+        <p className="text-md font-normal text-[#808080] text-center mt-4 line-clamp-2" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
           You can find a postcode by using the search bar or by clicking the
           locate me button to use
           <br />
@@ -287,7 +289,7 @@ return (
           </div>
         </div>
         <div className="flex justify-center gap-1 relative bottom-16 sm:flex sm:flex-col sm:m-2">
-            <div className="flex flex-col w-[200px] sm:m-auto">
+            <div className="flex flex-col w-[200px] sm:m-auto" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
                 <div className="flex flex-col bg-black opacity-[0.7] p-2 relative top-16 w-[150px]">
                     <div className="flex">
                      <p className="text-white font-bold">Trondheim</p>
@@ -298,7 +300,7 @@ return (
               <img src={throndheim} alt="throndheim" />  
               <p className="text-[#6F6A6A] text-sm flex justify-end">Double from</p>           
             </div>
-            <div className="flex flex-col w-[200px] sm:m-auto">
+            <div className="flex flex-col w-[200px] sm:m-auto" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
                 <div className="flex flex-col bg-black opacity-[0.7] p-2 relative top-16 w-[150px]">
                     <div className="flex">
                      <p className="text-white font-bold">Sixt</p>
@@ -309,7 +311,7 @@ return (
               <img src={sixt} alt="sixt" /> 
               <p className="text-[#6F6A6A] text-sm flex justify-end">Double from</p>
             </div>
-           <div className="flex flex-col w-[200px] sm:m-auto">
+           <div className="flex flex-col w-[200px] sm:m-auto" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
             <div className="flex flex-col bg-black opacity-[0.7] p-2 relative top-16 w-[150px]">
                     <div className="flex">
                      <p className="text-white font-bold">Brangsore</p>
@@ -395,7 +397,7 @@ return (
         <h3 className="text-3xl text-center text-[#0086BA] font-bold">
           Key Features
         </h3>
-        <div className="flex justify-center gap-10 mt-20 sm:flex sm:flex-col sm:p-4">
+        <div className="flex justify-center gap-10 mt-20 sm:flex sm:flex-col sm:p-4" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
           <div className="flex flex-col border border-gray-400 rounded-xl p-6 gap-8 bg-[#FAFEFF]">
             <div className="border rounded-full bg-[#8ed6f2] w-fit p-6 text-xl">
               <AiOutlineSearch className="fill-[#0086BA] text-4xl relative right-3" />
@@ -441,7 +443,7 @@ return (
           Popular Postcodes
         </h3>
         <div className="flex justify-center mt-5 gap-5 sm:flex sm:flex-col sm:p-4">
-          <div className="flex flex-col border rounded-lg pb-4 bg-[#FAFEFF]">
+          <div className="flex flex-col border rounded-lg pb-4 bg-[#FAFEFF]" data-aos="fade" data-aos-delay="300" data-aos-duration="1000">
             <img src={wales} alt="wales"/>
             <h3 className="text-2xl p-3 font-semibold">SA99 1DU</h3>
             <div className="flex gap-2 p-3 ">
@@ -449,7 +451,7 @@ return (
              <p className="text-md font-semibold">Morriston, Wales</p>
             </div>
           </div>
-          <div className="flex flex-col border rounded-lg pb-4 bg-[#FAFEFF]">
+          <div className="flex flex-col border rounded-lg pb-4 bg-[#FAFEFF]" data-aos="fade" data-aos-delay="300" data-aos-duration="1000">
             <img src={londonFirst} alt="londonF"/>
             <h3 className="text-2xl p-3 font-semibold">W1A 1AA</h3>
             <div className="flex gap-2 p-3 ">
@@ -457,7 +459,7 @@ return (
              <p className="text-md font-semibold">London, England</p>
             </div>
           </div>
-          <div className="flex flex-col border rounded-lg pb-4 bg-[#FAFEFF]">
+          <div className="flex flex-col border rounded-lg pb-4 bg-[#FAFEFF]" data-aos="fade" data-aos-delay="300" data-aos-duration="1000">
             <img src={londonSecond} alt="londonS"/>
             <h3 className="text-2xl p-3 font-semibold">WC2N 5DU</h3>
             <div className="flex gap-2 p-3 ">
