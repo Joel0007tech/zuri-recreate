@@ -2,6 +2,14 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-/* .drop-down{
-    display: none;
-} */
+@media only screen and (min-width:1250px) {
+    #mobile-only{
+        display: none;
+    }
+}
+
+@media only screen and  (max-width:428px)  {
+    #desktop-only{
+        display: none;
+    }
+}

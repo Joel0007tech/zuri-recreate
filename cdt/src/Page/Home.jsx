@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { AiFillHome, AiOutlineSearch } from "react-icons/ai";
+import { AiFillHome, AiOutlineSearch, AiOutlineMenu, AiFillCaretRight } from "react-icons/ai";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { MdGroups } from "react-icons/md";
 import { PiCompassFill } from "react-icons/pi";
@@ -17,7 +17,7 @@ import india from "../assets/ind.svg";
 import australia from "../assets/aus.svg";
 import spain from "../assets/esp.svg";
 import greece from "../assets/grc.svg";
-import italy from "../assets/ita.svg"
+import italy from "../assets/ita.svg";
 
 
 const Home = () => {
@@ -30,11 +30,16 @@ const Home = () => {
 const [open, setOpen] = useState(false);
 const [second, setSecond] = useState(false);
 const [third, setThird] = useState(false);
+const [mobileReveal, setMobileReveal] = useState(false);
+const [secondReveal, setSecondReveal] = useState(false);
+const [thirdReveal, setThirdReveal] = useState(false);
+
+
 
 return (
  <div>
-    <div>
-      <header className=" pt-4 pl-8 flex gap-5 justify-between border border-b-[#808080] sm:hidden">
+    
+      <header className="flex pt-4 pl-8 gap-5 justify-between border border-b-[#808080]" id="desktop-only">
         <a href="http://">
           <AiFillHome className=" fill-[#0086BA] text-2xl" />
         </a>
@@ -49,12 +54,12 @@ return (
               </a>
             </li>
             <div>
-            <IoMdArrowDropdown className="fill-[#808080] relative top-1.5" onMouseOver={() => setOpen(!open)}/>
+            <IoMdArrowDropdown className="fill-[#808080] relative top-1.5 cursor-pointer" onMouseOver={() => setOpen(!open)} />
             {open && (
             <div className="absolute" >
-              <ul className="relative top-2 right-28 bg-yellow-500 p-2">
-             <li><a href="http://">By country</a></li>
-             <li><a href="http://">By Introduction Date</a></li>
+              <ul className="relative top-2 right-28 bg-[#0086BA] p-2">
+             <li className=" text-white text-base rounded-b-md border-b-2 p-2"><a href="http://">By country</a></li>
+             <li className=" text-white text-base rounded-b-md border-b-2 p-2"><a href="http://">By Introduction Date</a></li>
              </ul>
             </div>
             )}
@@ -70,13 +75,13 @@ return (
               </a>
             </li>
             <div>
-            <IoMdArrowDropdown className="fill-[#808080] relative top-1.5" onMouseOver={() => setSecond(!second)}/>
+            <IoMdArrowDropdown className="fill-[#808080] relative top-1.5 cursor-pointer" onMouseOver={() => setSecond(!second)}/>
             {second && (
               <div className="absolute ">
-                <ul className="relative top-2 right-16 bg-yellow-500 p-2">
-                  <li>  <a href="http://">User Type</a></li>
-                  <li>  <a href="http://">Use Category</a></li>
-                  <li>  <a href="http://">Council Tax Band</a></li>
+                <ul className="relative top-2 right-16 bg-[#0086BA] p-2">
+                  <li className=" text-white text-base rounded-b-md border-b-2 p-2">  <a href="http://">User Type</a></li>
+                  <li className=" text-white text-base rounded-b-md border-b-2 p-2">  <a href="http://">Use Category</a></li>
+                  <li className=" text-white text-base rounded-b-md border-b-2 p-2">  <a href="http://">Council Tax Band</a></li>
                 </ul>
              </div>
             )}
@@ -108,22 +113,20 @@ return (
               </a>
             </li>
             <div>
-            <IoMdArrowDropdown className="fill-[#808080] relative top-1.5" onMouseOver={() => setThird(!third)} />
+            <IoMdArrowDropdown className="fill-[#808080] relative top-1.5  cursor-pointer" onMouseOver={() => setThird(!third)} />
             {third && (
                <div className=" absolute">
-              <ul className="relative top-2 right-16 bg-yellow-500 p-2">
-                  <li> <a href="http://">About This Website</a></li>
-                  <li><a href="http://">Privacy Policy</a></li>
+              <ul className="relative top-2 right-28 bg-[#0086BA] p-2 w-[200px]">
+                  <li className=" text-white text-base rounded-b-md border-b-2 p-2"><a href="http://">About This Website</a></li>
+                  <li className=" text-white text-base rounded-b-md border-b-2 p-2"><a href="http://">Privacy Policy</a></li>
                 </ul>
-              
-               
               </div>
             )}
             </div>
           </div>
         </ul>
         <div className="flex gap-2 border border-black rounded-lg p-2 relative bottom-2">
-          <AiOutlineSearch className="relative top-1 text-lg" />
+          <AiOutlineSearch className="relative top-1 text-lg"/>
           <input
             type="text"
             id=""
@@ -131,6 +134,79 @@ return (
             className="w-[300px] border-none"
           />
         </div>
+      </header>
+      <header className="flex flex-col" id="mobile-only">
+       <div className="flex justify-between w-full bg-[#0086BA] p-3">
+        <AiFillHome className="fill-white text-2xl"/>
+           <div className="flex gap-1" onClick={() => setOpen(!open)}>
+            <span className="text-white" >Menu</span>
+           <AiOutlineMenu  className="fill-white text-2xl cursor-pointer"/>
+           </div>
+        </div>
+
+        { open && (
+          <ul className="flex flex-col bg-[#0086BA] p-2 gap-2">
+         <div className="flex justify-between bg-blue-700 p-2">
+           <li className="list-none text-white text-base ">
+            <a href="http://">Help and Information</a></li>
+           <AiFillCaretRight className="fill-gray-400" onClick={() => setMobileReveal(!mobileReveal)}/>
+           </div>
+         
+           {mobileReveal &&
+           (
+              <ul className="flex flex-col">
+                <li><a href="http://" className="list-none text-white text-base bg-blue-700 p-2">Back</a></li>
+                <li><a href="http://" className="list-none text-white text-base bg-blue-700 p-2">Help and Information</a></li>
+                <li><a href="http://" className="list-none text-white text-base bg-blue-700 p-2">About this website</a></li>
+                <li><a href="http://" className="list-none text-white text-base bg-blue-700 p-2">Privacy Policy</a></li>
+              </ul>
+           )
+           } 
+            
+
+          <div className="flex ml-3 bg-blue-700">
+          <input type="text" name="" id="" className=" pl-10"/>
+          <a href="http://" className="bg-[#0027BA] text-white p-1 pr-7 pl-7 list-none text-base">
+            Search</a>
+          </div>
+         <div className="flex justify-between bg-blue-700 p-2">
+          <li className="list-none text-white text-base">
+            <a href="http://">Postcode Lists</a></li>
+           <AiFillCaretRight className="fill-gray-400" target="blank" onClick={() => setSecondReveal(!secondReveal)}/>
+         </div>
+         {secondReveal &&
+           (
+              <ul className="flex flex-col">
+                <li><a href="http://" className="list-none text-white text-base bg-blue-700 p-2">Back</a></li>
+                <li><a href="http://" className="list-none text-white text-base bg-blue-700 p-2">Postcard Lists</a></li>
+                <li><a href="http://" className="list-none text-white text-base bg-blue-700 p-2">By County</a></li>
+                <li><a href="http://" className="list-none text-white text-base bg-blue-700 p-2">By Introduction Date</a></li>
+              </ul>
+           )
+           } 
+          <div className="flex justify-between bg-blue-700 p-2">
+            <li className="list-none text-white text-base ">
+            <a href="http://">Postcode Maps</a></li>
+           <AiFillCaretRight className="fill-gray-400" onClick={() => setThirdReveal(!thirdReveal)}/>
+            </div>
+            {thirdReveal &&
+           (
+              <ul className="flex flex-col">
+                <li><a href="http://" className="list-none text-white text-base bg-blue-700 p-2">Back</a></li>
+                <li><a href="http://" className="list-none text-white text-base bg-blue-700 p-2">Postcode Maps</a></li>
+                <li><a href="http://" className="list-none text-white text-base bg-blue-700 p-2">User Type</a></li>
+                <li><a href="http://" className="list-none text-white text-base bg-blue-700 p-2">Use Category</a></li>
+                <li><a href="http://" className="list-none text-white text-base bg-blue-700 p-2">Council Tax Band</a></li>
+              </ul>
+           )
+           } 
+          <li className="list-none text-white text-base bg-blue-700 p-2">
+            <a href="http://">Nearest Postcodes</a></li>
+          <li className="list-none text-white text-base bg-blue-700 p-2">
+            <a href="http://">Postcode Lottery</a></li>
+          </ul>
+        )
+        }
       </header>
       <section className=" mt-20">
         <h3 className="text-center text-5xl font-semibold sm:text-4xl">
@@ -144,12 +220,12 @@ return (
         </p>
         <div className="flex gap-3 justify-center mt-14 sm:flex sm:flex-col">
         
-            <AiOutlineSearch className="relative top-2.5 text-2xl left-10" />
+            <AiOutlineSearch className="relative top-2.5 text-2xl left-10 sm:top-12 sm:right-3" />
             <input
               type="text"
               id=""
               placeholder="search for postal code or placename"
-              className="w-[300px] border border-black rounded-md pl-10 pr-10"
+              className="w-[300px] border border-black rounded-md pl-10 pr-10 sm:m-auto sm:p-2 sm:pl-9"
             />
 
           <a
@@ -190,18 +266,18 @@ return (
                 placeholder="eg. city,region,di"
                 className="p-2 border rounded-sm"
               />
-              <input type="date" name="" id="" className="border rounded-sm" />
+              <input type="date" name="" id="" className="border rounded-sm p-2" />
               <a
                 href="http://"
                 className="bg-[#0086BA] text-white text-sm font-bold
-                 list-none rounded-md w-fit h-fit pl-8 pr-8 p-3 relative right-3"
+                 list-none rounded-md w-fit h-fit pl-8 pr-8 p-3 relative right-3 sm:m-auto"
               >
                 Search
               </a>
             </div>
             <div
               className="flex bg-[#FFBE1E] text-white text-sm font-bold
-                 list-none rounded-md w-fit h-fit pl-6 pr-6  p-3 gap-1"
+                 list-none rounded-md w-fit h-fit pl-6 pr-6 p-3 gap-1 sm:m-auto sm:relative sm:right-3"
             >
               <MdGroups className="fill-[gray] text-xl" />
               <a href="http://" className="list-none text-[#CF9700]">
@@ -426,7 +502,7 @@ return (
         </div>
        </div>
      </footer>
-    </div> 
+    
   </div>
 )
 };
