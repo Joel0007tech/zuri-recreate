@@ -156,8 +156,7 @@ return (
            {mobileReveal &&
            (
            
-              <ul className="flex flex-col relative">
-                <li><a href="http://" className="list-none text-white text-base">Back</a></li>
+              <ul className="flex flex-col relative" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
                 <li><a href="http://" className="list-none text-white text-base">Help and Information</a></li>
                 <li><a href="http://" className="list-none text-white text-base">About this website</a></li>
                 <li><a href="http://" className="list-none text-white text-base">Privacy Policy</a></li>
@@ -180,7 +179,6 @@ return (
          {secondReveal &&
            (
               <ul className="flex flex-col">
-                <li><a href="http://" className="list-none text-white text-base">Back</a></li>
                 <li><a href="http://" className="list-none text-white text-base">Postcard Lists</a></li>
                 <li><a href="http://" className="list-none text-white text-base">By County</a></li>
                 <li><a href="http://" className="list-none text-white text-base">By Introduction Date</a></li>
@@ -195,7 +193,6 @@ return (
             {thirdReveal &&
            (
               <ul className="flex flex-col ">
-                <li><a href="http://" className="list-none text-white text-base">Back</a></li>
                 <li><a href="http://" className="list-none text-white text-base">Postcode Maps</a></li>
                 <li><a href="http://" className="list-none text-white text-base">User Type</a></li>
                 <li><a href="http://" className="list-none text-white text-base">Use Category</a></li>
