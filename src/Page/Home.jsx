@@ -178,7 +178,7 @@ return (
          </div>
          {secondReveal &&
            (
-              <ul className="flex flex-col">
+              <ul className="flex flex-col" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
                 <li><a href="http://" className="list-none text-white text-base">Postcard Lists</a></li>
                 <li><a href="http://" className="list-none text-white text-base">By County</a></li>
                 <li><a href="http://" className="list-none text-white text-base">By Introduction Date</a></li>
@@ -192,7 +192,7 @@ return (
             </div>
             {thirdReveal &&
            (
-              <ul className="flex flex-col ">
+              <ul className="flex flex-col" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
                 <li><a href="http://" className="list-none text-white text-base">Postcode Maps</a></li>
                 <li><a href="http://" className="list-none text-white text-base">User Type</a></li>
                 <li><a href="http://" className="list-none text-white text-base">Use Category</a></li>
