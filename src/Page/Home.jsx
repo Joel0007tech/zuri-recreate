@@ -394,7 +394,8 @@ return (
         <h3 className="text-3xl text-center text-[#0086BA] font-bold">
           Key Features
         </h3>
-        <div className="flex justify-center gap-10 mt-20 sm:flex sm:flex-col sm:p-4" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
+        <div className="flex justify-center gap-10 mt-20 sm:flex sm:flex-col sm:p-4" 
+        data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
           <div className="flex flex-col border border-gray-400 rounded-xl p-6 gap-8 bg-[#FAFEFF]">
             <div className="border rounded-full bg-[#8ed6f2] w-fit p-6 text-xl">
               <AiOutlineSearch className="fill-[#0086BA] text-4xl relative right-3" />
@@ -440,7 +441,7 @@ return (
           Popular Postcodes
         </h3>
         <div className="flex justify-center mt-5 gap-5 sm:flex sm:flex-col sm:p-4">
-          <div className="flex flex-col border rounded-lg pb-4 bg-[#FAFEFF]" data-aos="fade" data-aos-delay="300" data-aos-duration="1000">
+          <div className="flex flex-col border rounded-lg pb-4 bg-[#FAFEFF]" data-aos="flip-left" data-aos-delay="300" data-aos-duration="1000">
             <img src={wales} alt="wales"/>
             <h3 className="text-2xl p-3 font-semibold">SA99 1DU</h3>
             <div className="flex gap-2 p-3 ">
@@ -448,7 +449,7 @@ return (
              <p className="text-md font-semibold">Morriston, Wales</p>
             </div>
           </div>
-          <div className="flex flex-col border rounded-lg pb-4 bg-[#FAFEFF]" data-aos="fade" data-aos-delay="300" data-aos-duration="1000">
+          <div className="flex flex-col border rounded-lg pb-4 bg-[#FAFEFF]" data-aos="flip-left" data-aos-delay="300" data-aos-duration="1000">
             <img src={londonFirst} alt="londonF"/>
             <h3 className="text-2xl p-3 font-semibold">W1A 1AA</h3>
             <div className="flex gap-2 p-3 ">
@@ -456,7 +457,7 @@ return (
              <p className="text-md font-semibold">London, England</p>
             </div>
           </div>
-          <div className="flex flex-col border rounded-lg pb-4 bg-[#FAFEFF]" data-aos="fade" data-aos-delay="300" data-aos-duration="1000">
+          <div className="flex flex-col border rounded-lg pb-4 bg-[#FAFEFF]" data-aos="flip-left" data-aos-delay="300" data-aos-duration="1000">
             <img src={londonSecond} alt="londonS"/>
             <h3 className="text-2xl p-3 font-semibold">WC2N 5DU</h3>
             <div className="flex gap-2 p-3 ">
