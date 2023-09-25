@@ -165,7 +165,6 @@ return (
            )
            } 
          
-            
           <div className="flex ml-3 bg-blue-700">
           <input type="text" name="" id="" className=" pl-10"/>
           <a href="http://" className="bg-[#0027BA] text-white p-1 pr-7 pl-7 list-none text-base">
@@ -219,7 +218,6 @@ return (
           your device geolocation service to find postcodes near you
         </p>
         <div className="flex gap-3 justify-center mt-14 sm:flex sm:flex-col">
-        
             <AiOutlineSearch className="relative top-2.5 text-2xl left-10 sm:top-12 sm:right-3" />
             <input
               type="text"
@@ -266,7 +264,8 @@ return (
                 placeholder="eg. city,region,di"
                 className="p-2 border rounded-sm"
               />
-              <input type="date" name="" id="" className="border rounded-sm p-2" />
+              <input type="date" name="" id="" className="border rounded-sm p-2" 
+              placeholder="22-August 23"/>
               <a
                 href="http://"
                 className="bg-[#0086BA] text-white text-sm font-bold
